@@ -1,0 +1,79 @@
+# WeedSense Default Configuration
+# Training configuration for WeedSense model on weed dataset
+
+# Device configuration
+DEVICE: 'cuda:0'  # Use CUDA for GPU acceleration
+SAVE_DIR: './outputs'  # Directory to save model outputs
+
+# Dataset configuration
+DATASET:
+  NAME: WeedDataset  # Dataset class name
+  ROOT: './data'  # Root directory of the dataset
+  NUM_CLASSES: 17  # 16 weed species + 1 background
+  NUM_WEEKS: 11  # Growth stages from week 1 to 11
+  IGNORE_LABEL: 255  # Label to ignore during training
+
+# Model configuration
+MODEL:
+  NAME: WeedSense  # Model name
+  NUM_CLASSES: 17  # Number of segmentation classes
+  NUM_WEEKS: 11  # Number of growth stages
+  PRETRAINED: ''  # Path to pretrained weights (empty means training from scratch)
+
+# Training configuration
+TRAIN:
+  IMAGE_SIZE: [512, 512]  # Input image size for training
+  BATCH_SIZE: 8  # Number of samples per batch
+  NUM_WORKERS: 4  # Number of data loading workers
+  EPOCHS: 50  # Total number of training epochs
+  EVAL_INTERVAL: 10  # Evaluate model every N epochs
+  AMP: False  # Automatic Mixed Precision (disable for stability)
+  DDP: False  # Distributed Data Parallel training
+
+# Loss function configuration
+LOSS:
+  NAME: MultiTaskLoss  # Multi-task loss combining all three tasks
+  SEG_WEIGHT: 1.0  # Weight for segmentation loss
+  HEIGHT_WEIGHT: 1.0  # Weight for height estimation loss
+  WEEK_WEIGHT: 1.0  # Weight for week classification loss
+  AUX_WEIGHTS: [1.0, 0.4, 0.4, 0.4, 0.4]  # Weights for auxiliary heads [main, aux2, aux3, aux4, aux5]
+
+# Optimizer configuration
+OPTIMIZER:
+  NAME: adamw  # AdamW optimizer
+  LR: 0.0002  # Initial learning rate
+  WEIGHT_DECAY: 0.0001  # L2 regularization factor
+  BETAS: [0.9, 0.999]  # Adam beta parameters
+
+# Learning rate scheduler configuration
+SCHEDULER:
+  NAME: warmupcosinelr  # Cosine annealing with warm-up
+  WARMUP_ITER: 1500  # Number of warm-up iterations
+  WARMUP_RATIO: 0.1  # Ratio of warm-up learning rate to base LR
+  ETA_RATIO: 0  # Minimum LR ratio (LR will decay to 0)
+
+# Evaluation configuration
+EVAL:
+  MODEL_PATH: './pretrained/weedsense_iccv2025.pth'  # Path to model for evaluation
+  IMAGE_SIZE: [512, 512]  # Input image size for evaluation
+  BATCH_SIZE: 1  # Batch size for evaluation
+  NUM_WORKERS: 1  # Number of workers for evaluation
+  SPLIT: 'test'  # Dataset split for evaluation
+
+# Inference configuration
+TEST:
+  MODEL_PATH: './pretrained/weedsense_iccv2025.pth'  # Path to model for testing
+  IMAGE_SIZE: [512, 512]  # Input image size for testing
+  OVERLAY: True  # Enable overlay of predictions on original images
+  OUTPUT_DIR: './outputs/predictions'  # Directory to save predictions
+
+# Data augmentation configuration
+AUGMENTATION:
+  RANDOM_CROP: True  # Enable random cropping
+  CROP_SCALE: [0.5, 2.0]  # Scale range for random crop
+  HORIZONTAL_FLIP: True  # Enable horizontal flipping
+  FLIP_PROB: 0.5  # Probability of horizontal flip
+  NORMALIZE: True  # Enable ImageNet normalization
+  MEAN: [0.485, 0.456, 0.406]  # ImageNet mean
+  STD: [0.229, 0.224, 0.225]  # ImageNet std
+

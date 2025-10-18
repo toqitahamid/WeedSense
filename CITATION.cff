@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "WeedSense: Multi-Task Learning for Weed Segmentation, Height Estimation, and Growth Stage Classification"
+version: 1.0.0
+date-released: 2025-10-18
+url: "https://weedsense.github.io"
+repository-code: "https://github.com/toqitahamid/weedsense"
+license: MIT
+authors:
+  - family-names: "Sarker"
+    given-names: "Toqi Tahamid"
+    email: "toqitahamid.sarker@siu.edu"
+    affiliation: "Southern Illinois University Carbondale"
+  - family-names: "Ahmed"
+    given-names: "Khaled R"
+    email: "khaled.ahmed@siu.edu"
+    affiliation: "Southern Illinois University Carbondale"
+  - family-names: "Islam"
+    given-names: "Taminul"
+    email: "taminul.islam@siu.edu"
+    affiliation: "Southern Illinois University Carbondale"
+  - family-names: "Rankrape"
+    given-names: "Cristiana Bernardi"
+    email: "cris.rankrape@siu.edu"
+    affiliation: "Southern Illinois University Carbondale"
+  - family-names: "Gage"
+    given-names: "Karla"
+    email: "kgage@siu.edu"
+    affiliation: "Southern Illinois University Carbondale"
+keywords:
+  - deep learning
+  - computer vision
+  - semantic segmentation
+  - multi-task learning
+  - agriculture
+  - weed detection
+  - plant phenotyping
+  - growth stage classification
+  - height estimation
+  - pytorch
+preferred-citation:
+  type: article
+  title: "WeedSense: Multi-Task Learning for Weed Segmentation, Height Estimation, and Growth Stage Classification"
+  authors:
+    - family-names: "Sarker"
+      given-names: "Toqi Tahamid"
+    - family-names: "Ahmed"
+      given-names: "Khaled R"
+    - family-names: "Islam"
+      given-names: "Taminul"
+    - family-names: "Rankrape"
+      given-names: "Cristiana Bernardi"
+    - family-names: "Gage"
+      given-names: "Karla"
+  journal: "arXiv preprint"
+  year: 2025
+  arxiv: "2508.14486"
+  url: "https://arxiv.org/abs/2508.14486"
+  doi: "10.48550/arXiv.2508.14486"
+  notes: "Accepted to ICCVW 2025"
+

@@ -1,0 +1,41 @@
+# WeedSense Requirements
+# Core dependencies for WeedSense model
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Computer Vision & Image Processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Configuration
+PyYAML>=6.0
+omegaconf>=2.3.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Metrics
+scikit-learn>=1.3.0
+
+# Optional: For model profiling and optimization
+# thop>=0.1.1  # For FLOPs calculation
+# onnx>=1.14.0  # For ONNX export
+# onnxruntime>=1.15.0  # For ONNX inference
+# tensorrt  # For TensorRT optimization (requires NVIDIA setup)
+
+# Optional: For training utilities
+# wandb>=0.15.0  # For experiment tracking
+# tensorboard>=2.13.0  # For TensorBoard logging
+
