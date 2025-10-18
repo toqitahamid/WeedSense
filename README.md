@@ -1,15 +1,15 @@
 # WeedSense: Multi-Task Learning for Weed Segmentation, Height Estimation, and Growth Stage Classification
 
 [![ICCV 2025](https://img.shields.io/badge/ICCV-2025-blue)](https://iccv2025.org/)
-[![arXiv](https://img.shields.io/badge/arXiv-TBD-b31b1b.svg)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.14486-b31b1b.svg)](https://arxiv.org/abs/2508.14486)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Official PyTorch implementation** of WeedSense accepted at ICCV 2025.
+**Official PyTorch implementation** of WeedSense accepted at ICCV Workshop 2025.
 
-> 📄 **Paper**: Coming soon  
-> 🌐 **Project Page**: weedsense.github.io  
+> 📄 **Paper**: [arXiv:2508.14486](https://arxiv.org/abs/2508.14486)  
+> 🌐 **Project Page**: [https://weedsense.github.io](https://weedsense.github.io)  
 > 🎬 **Demo**: See project page for demonstrations
 
 ## 📋 Overview
@@ -350,7 +350,8 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 For questions and feedback:
 - **Email**: toqitahamid.sarker@siu.edu
-- **Project Page**: weedsense.github.io
+- **Project Page**: [https://weedsense.github.io](https://weedsense.github.io)
+- **arXiv**: [https://arxiv.org/abs/2508.14486](https://arxiv.org/abs/2508.14486)
 - **GitHub Issues**: For bug reports and feature requests
 
 ---
